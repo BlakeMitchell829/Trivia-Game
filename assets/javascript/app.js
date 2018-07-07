@@ -1,5 +1,5 @@
 //*Create Timer
-var counter = 100;
+var counter = 160;
 var t;
 var isTimerOn = false;
 
@@ -14,7 +14,6 @@ function startMe() {
         isTimerOn = true;
     countdown();
 }
-
 //*Create trivia questions//
 function buildQuiz() {
     // Store the HTML output
@@ -74,6 +73,7 @@ function showResults() {
             // color the answers red
             answerContainers[questionNumber].style.color = "red";
         }
+        isTimerOn = false;
     });
 
     // show number of correct answers out of total
@@ -191,6 +191,5 @@ const myQuestions = [{
 // display quiz right away
 buildQuiz();
 
-// on submit, show results
 // on submit, show results
 submitButton.addEventListener("click", showResults);
